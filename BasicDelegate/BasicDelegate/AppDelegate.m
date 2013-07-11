@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BDMainViewController.h"
 
 @implementation AppDelegate
 
@@ -21,6 +22,10 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    UIViewController *viewController = [[BDMainViewController alloc] init];
+    self.window.rootViewController = viewController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
